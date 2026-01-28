@@ -121,7 +121,7 @@ export function initializeDatabase() {
 }
 
 // Seed initial admin user
-export function seedAdminUser() {
+export async function seedAdminUser() {
   const bcrypt = await import('bcryptjs');
   const hashedPassword = bcrypt.hashSync('admin123', 10);
 
